@@ -1,0 +1,659 @@
+.meringkas-data-d4w {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  
+    .rectangle-1-qRu {
+      background-color: #292929;
+      flex-shrink: 0;
+      height: 11.9rem;
+      margin-bottom: 2.1rem;
+      width: 100%;
+    }
+    .ringkas-data-Krs {
+      color: #000000;
+      flex-shrink: 0;
+      font-family: Inter, 'Source Sans Pro';
+      font-size: 6.4rem;
+      font-weight: 600;
+      line-height: 1.2125;
+      margin-left: 2.4rem;
+      white-space: nowrap;
+    }
+    .auto-group-cvgp-pHq {
+      flex-shrink: 0;
+      height: 86.2rem;
+      position: relative;
+      width: 100%;
+  
+      .auto-group-mrnx-Yjd {
+        align-items: flex-end;
+        display: flex;
+        height: 6.8004rem;
+        left: 2.4rem;
+        position: absolute;
+        top: 1.9996rem;
+        width: 189.6rem;
+  
+        .select-data-set-3RV {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 1.2125;
+          margin: 0rem 6.9rem 0.9rem 0rem;
+          white-space: nowrap;
+        }
+        .auto-group-67tz-XLf {
+          border-bottom: solid 0.1rem rgba(41, 41, 41, 0.5500000119);
+          border-top: solid 0.1rem rgba(41, 41, 41, 0.5500000119);
+          box-sizing: border-box;
+          flex-shrink: 0;
+          height: 100%;
+          position: relative;
+          width: 165.6rem;
+  
+          .row-FnT {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 1.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 0.5004rem;
+            white-space: nowrap;
+            width: 4.1rem;
+          }
+          .column-jhd {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 1.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 3.8004rem;
+            white-space: nowrap;
+            width: 7.2rem;
+          }
+          .line-4-3TR {
+            background-color: rgba(41, 41, 41, 0.5500000119);
+            height: 0.1rem;
+            left: 0;
+            position: absolute;
+            top: 3.4004rem;
+            width: 165.6rem;
+          }
+          .line-5-NEo {
+            background-color: rgba(41, 41, 41, 0.5500000119);
+            height: 6.7007rem;
+            left: 11.15rem;
+            position: absolute;
+            top: 0;
+            width: 0.1rem;
+          }
+        }
+      }
+      .line-2-4NX {
+        background-color: rgba(41, 41, 41, 0.5500000119);
+        height: 0.1rem;
+        left: 1.3rem;
+        position: absolute;
+        top: 8.8rem;
+        width: 24.0133rem;
+      }
+      .auto-group-vzat-zmy {
+        background-color: #36da27;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        font-family: Inter, 'Source Sans Pro';
+        font-size: 1.6rem;
+        font-weight: 400;
+        height: 3.3rem;
+        left: 2.4rem;
+        line-height: 1.2125;
+        padding: 0.7rem 1.8rem 0.6rem 1.8rem;
+        position: absolute;
+        top: 11.2rem;
+        white-space: nowrap;
+        width: 21.4rem;
+      }
+      .auto-group-sgqb-ozK {
+        align-items: flex-start;
+        display: flex;
+        height: 66.6rem;
+        left: 2.4rem;
+        position: absolute;
+        top: 14.5rem;
+        width: 174.56rem;
+  
+        .auto-group-jldq-YBD {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          margin: 1rem 4.3rem 0rem 0rem;
+          row-gap: 1rem;
+          width: 21.4rem;
+  
+          .auto-group-zekk-rhh {
+            background-color: #36da27;
+            border-radius: 2rem;
+            box-sizing: border-box;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2125;
+            padding: 0.7rem 1.8rem 0.6rem 1.8rem;
+            white-space: nowrap;
+            width: 100%;
+          }
+          .auto-group-pqjv-9Ru {
+            background-color: #36da27;
+            border-radius: 2rem;
+            box-sizing: border-box;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2125;
+            padding: 0.7rem 1.8rem 0.6rem 1.8rem;
+            white-space: nowrap;
+            width: 100%;
+          }
+          .auto-group-pygo-Sfu {
+            background-color: #36da27;
+            border-radius: 2rem;
+            box-sizing: border-box;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2125;
+            padding: 0.7rem 1.8rem 0.6rem 1.8rem;
+            white-space: nowrap;
+            width: 100%;
+          }
+          .auto-group-by51-XhM {
+            background-color: #36da27;
+            border-radius: 2rem;
+            box-sizing: border-box;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2125;
+            padding: 0.7rem 1.8rem 0.6rem 1.8rem;
+            white-space: nowrap;
+            width: 100%;
+          }
+        }
+        .group-1-2e7 {
+          flex-shrink: 0;
+          height: 100%;
+          position: relative;
+          width: 148.86rem;
+  
+          .rectangle-2-Xas {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            height: 66.6rem;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 145.6rem;
+          }
+          .line-6-fSB {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 54.7296rem;
+            width: 122.2578rem;
+          }
+          .line-7-aZ9 {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 46.3635rem;
+            width: 122.2578rem;
+          }
+          .line-8-KFq {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 37.9975rem;
+            width: 122.2578rem;
+          }
+          .line-9-T79 {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 29.6315rem;
+            width: 122.2578rem;
+          }
+          .line-10-BYw {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 21.2655rem;
+            width: 122.2578rem;
+          }
+          .line-11-7Bh {
+            background-color: rgba(41, 41, 41, 0.150000006);
+            height: 0.1rem;
+            left: 26.6022rem;
+            position: absolute;
+            top: 12.8995rem;
+            width: 122.2578rem;
+          }
+          .frequency-FHu {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.1rem;
+            font-weight: 400;
+            height: 2.7rem;
+            left: 13.1978rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 27.1709rem;
+            width: 3rem;
+          }
+          .item-1000-M63 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 18.7444rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 11.9153rem;
+            white-space: nowrap;
+            width: 4.7rem;
+          }
+          .item-800-T95 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 19.4378rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 20.2813rem;
+            white-space: nowrap;
+            width: 3.8rem;
+          }
+          .item-600-y7R {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 19.4378rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 28.6473rem;
+            white-space: nowrap;
+            width: 3.8rem;
+          }
+          .item-400-4Pm {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 19.4378rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 37.0133rem;
+            white-space: nowrap;
+            width: 3.8rem;
+          }
+          .item-200-NfM {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 19.4378rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 45.3793rem;
+            white-space: nowrap;
+            width: 3.8rem;
+          }
+          .numdealspurchases-tdh {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 4rem;
+            font-weight: 500;
+            height: 4.9rem;
+            left: 17.1266rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 2.8931rem;
+            white-space: nowrap;
+            width: 39.6rem;
+          }
+          .item-0-bo1 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 22.2111rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 53.7453rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-2-6jm {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 35.6155rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-4-cCK {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 47.6rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-3-KcX {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 41.6rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-6-qas {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 58.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-5-kxj {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 53rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-8-tJF {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 69.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-7-1Ns {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 63.8rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.2rem;
+          }
+          .numdealspurchases-w1d {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 1.1rem;
+            font-weight: 400;
+            height: 1.4rem;
+            left: 75.1356rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 59.1586rem;
+            white-space: nowrap;
+            width: 10.8rem;
+          }
+          .item-10-egj {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 79.8rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 2.2rem;
+          }
+          .item-9-BAs {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 74.6rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.3rem;
+          }
+          .item-12-5X9 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 91rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 2.2rem;
+          }
+          .item-11-Cbm {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 85.7rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 1.9rem;
+          }
+          .item-14-iq1 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 102.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.8778rem;
+            white-space: nowrap;
+            width: 2.3rem;
+          }
+          .item-13-FK9 {
+            color: #000000;
+            font-family: Inter, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            height: 2.5rem;
+            left: 97.3rem;
+            line-height: 1.2125;
+            position: absolute;
+            top: 55.9rem;
+            white-space: nowrap;
+            width: 2.3rem;
+          }
+          .rectangle-N8s {
+            background-color: #000000;
+            height: 26.2036rem;
+            left: 35.73rem;
+            position: absolute;
+            top: 28.1978rem;
+            width: 2.4278rem;
+          }
+          .rectangle-6qZ {
+            background-color: #000000;
+            height: 12.4525rem;
+            left: 46.9rem;
+            position: absolute;
+            top: 41.9rem;
+            width: 2.3064rem;
+          }
+          .rectangle-eMH {
+            background-color: #000000;
+            height: 19.4rem;
+            left: 52.6rem;
+            position: absolute;
+            top: 35rem;
+            width: 2.3rem;
+          }
+          .rectangle-Zj9 {
+            background-color: #000000;
+            height: 16.4rem;
+            left: 41.3rem;
+            position: absolute;
+            top: 38rem;
+            width: 2.3rem;
+          }
+          .rectangle-tmR {
+            background-color: #000000;
+            height: 24.0646rem;
+            left: 57.9rem;
+            position: absolute;
+            top: 30.4517rem;
+            width: 2.3064rem;
+          }
+          .rectangle-EaP {
+            background-color: #000000;
+            height: 8.6327rem;
+            left: 68.9rem;
+            position: absolute;
+            top: 45.8714rem;
+            width: 2.4278rem;
+          }
+          .rectangle-yXy {
+            background-color: #000000;
+            height: 14.8rem;
+            left: 63.4rem;
+            position: absolute;
+            top: 39.7rem;
+            width: 2.4rem;
+          }
+          .rectangle-uwR {
+            background-color: #292929;
+            height: 17.1126rem;
+            left: 80rem;
+            position: absolute;
+            top: 37.3414rem;
+            width: 2.3064rem;
+          }
+          .rectangle-4ZR {
+            background-color: #292929;
+            height: 21.1rem;
+            left: 73.9rem;
+            position: absolute;
+            top: 33.3rem;
+            width: 2.3rem;
+          }
+          .rectangle-p2o {
+            background-color: #292929;
+            height: 19.4809rem;
+            left: 91rem;
+            position: absolute;
+            top: 35.0448rem;
+            width: 2.4278rem;
+          }
+          .rectangle-9Ky {
+            background-color: #292929;
+            height: 15rem;
+            left: 85.6rem;
+            position: absolute;
+            top: 39.7rem;
+            width: 2.4rem;
+          }
+          .rectangle-6FD {
+            background-color: #292929;
+            height: 14.1332rem;
+            left: 102.2rem;
+            position: absolute;
+            top: 40.5rem;
+            width: 2.3064rem;
+          }
+          .rectangle-EcK {
+            background-color: #292929;
+            height: 15.6rem;
+            left: 96.6rem;
+            position: absolute;
+            top: 39rem;
+            width: 2.3rem;
+          }
+        }
+      }
+    }
+  }

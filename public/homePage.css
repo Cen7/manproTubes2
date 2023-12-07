@@ -1,0 +1,1049 @@
+.home-page--ndy {
+    align-items: center;
+    background-color: #fefffc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 6.9rem;
+    position: relative;
+    width: 100%;
+  
+    .navbar-7Js {
+      background-color: #292929;
+      flex-shrink: 0;
+      height: 11.9rem;
+      margin-bottom: 5.8rem;
+      width: 100%;
+    }
+    .auto-group-mygs-cFd {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 83.4rem;
+      margin: 0rem 14.9rem 0rem 15rem;
+      width: calc(100% - 29.9rem);
+  
+      .auto-group-snbd-6Rh {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        height: 100%;
+        margin-right: 2.4rem;
+        row-gap: 2.6rem;
+        width: 96.7rem;
+  
+        .dashboard-cew {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 7rem;
+          font-weight: 700;
+          line-height: 1.2125;
+          white-space: nowrap;
+        }
+        .auto-group-j6bu-iCB {
+          align-items: center;
+          display: flex;
+          flex-shrink: 0;
+          height: 5rem;
+          width: 100%;
+  
+          .upload-file-Fhu {
+            align-items: center;
+            border-radius: 2rem;
+            display: flex;
+            flex-shrink: 0;
+            height: 100%;
+            margin-right: 2.1rem;
+  
+            .upload-new-data-Pp7 {
+              color: #000000;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 3rem;
+              font-weight: 500;
+              line-height: 1.2125;
+              margin: 0.1rem 2.6rem 0rem 0rem;
+              white-space: nowrap;
+            }
+            .upload-button-6Td {
+              align-items: center;
+              background-color: #292929;
+              border-radius: 2rem;
+              color: #fefffc;
+              display: flex;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.6rem;
+              font-weight: 500;
+              height: 100%;
+              justify-content: center;
+              line-height: 1.2125;
+              white-space: nowrap;
+              width: 20.8rem;
+            }
+          }
+          .line-25-Xoq {
+            background-color: #000000;
+            flex-shrink: 0;
+            height: 5rem;
+            margin-right: 2.2rem;
+            width: 0.1rem;
+          }
+          .view-data-set-rbD {
+            align-items: center;
+            border-radius: 2rem;
+            display: flex;
+            flex-shrink: 0;
+            height: 100%;
+  
+            .view-data-sets-zxK {
+              color: #000000;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 3rem;
+              font-weight: 500;
+              line-height: 1.2125;
+              margin: 0.1rem 2.6rem 0rem 0rem;
+              white-space: nowrap;
+            }
+            .view-button-idR {
+              align-items: center;
+              background-color: #292929;
+              border-radius: 2rem;
+              color: #fefffc;
+              display: flex;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.6rem;
+              font-weight: 500;
+              height: 100%;
+              justify-content: center;
+              line-height: 1.2125;
+              white-space: nowrap;
+              width: 20.8rem;
+            }
+          }
+        }
+        .table-afd {
+          align-items: center;
+          background-color: #e8e8e8;
+          border: solid 0.1rem #000000;
+          border-radius: 2rem;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          padding: 2.8rem 4.5rem 23.2rem 3.3rem;
+          width: 100%;
+  
+          .auto-group-waqb-uT1 {
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin: 0rem 0.8rem 4.7rem 0rem;
+            width: calc(100% - 0.8002rem);
+  
+            .jumlah-produk-ikan-fish-yang-dibeli-oleh-tiap-kelompok-education-q5m {
+              color: #000000;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.6rem;
+              font-weight: 500;
+              line-height: 1.2125;
+              margin-right: 11.7rem;
+              max-width: 57.7rem;
+            }
+            .view-more-Wxb {
+              align-items: center;
+              background-color: #fefffc;
+              border: solid 0.1rem #000000;
+              border-radius: 2rem;
+              box-sizing: border-box;
+              color: #000000;
+              display: flex;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.2rem;
+              font-weight: 500;
+              height: 5rem;
+              justify-content: center;
+              line-height: 1.2125;
+              margin-top: 0.2rem;
+              white-space: nowrap;
+              width: 18.7rem;
+            }
+          }
+          .auto-group-fhvd-LRq {
+            flex-shrink: 0;
+            height: 27.6rem;
+            margin-left: 1rem;
+            position: relative;
+            width: 87.9002rem;
+  
+            .count-of-fish-GKV {
+              align-items: center;
+              display: flex;
+              flex-direction: column;
+              height: 25.9rem;
+              left: 39rem;
+              position: absolute;
+              top: 0;
+              width: 10.1rem;
+  
+              .count-of-fish-aqy {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-bottom: 2.7rem;
+                text-align: center;
+                white-space: nowrap;
+              }
+              .item-10-75D {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                text-align: center;
+                white-space: nowrap;
+              }
+              .item-21-dJT {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                white-space: nowrap;
+              }
+              .item-15-xLj {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                white-space: nowrap;
+              }
+              .item-32-HP1 {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                white-space: nowrap;
+              }
+              .item-25-pdq {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                white-space: nowrap;
+              }
+            }
+            .education-m3H {
+              align-items: center;
+              display: flex;
+              flex-direction: column;
+              height: 25.9rem;
+              left: 1.7rem;
+              position: absolute;
+              top: 0;
+              width: 9.3rem;
+  
+              .education-TKR {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 0.1rem 2.7rem 0rem;
+                white-space: nowrap;
+              }
+              .primary-school-Ajd {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-bottom: 2.5rem;
+                text-align: center;
+                white-space: nowrap;
+              }
+              .junior-high-school-se3 {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 2.5rem;
+                max-width: 7rem;
+              }
+              .high-school-BPq {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                white-space: nowrap;
+              }
+              .college-JzF {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                margin-bottom: 3.3rem;
+                white-space: nowrap;
+              }
+              .university-F8o {
+                align-items: center;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1.3rem;
+                font-weight: 400;
+                justify-content: center;
+                line-height: 1.2125;
+                white-space: nowrap;
+              }
+            }
+            .table-line-Nz7 {
+              align-items: center;
+              border-bottom: solid 0.1rem rgba(41, 41, 41, 0.150000006);
+              border-top: solid 0.3rem rgba(41, 41, 41, 0.150000006);
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              height: 24.5759rem;
+              left: 0;
+              padding: 4.876rem 0rem 4.9rem 0rem;
+              position: absolute;
+              row-gap: 4.8rem;
+              top: 3.0241rem;
+              width: 87.9002rem;
+  
+              .line-22-Tkf {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                margin-right: 0.0002rem;
+                width: calc(100% - 0.0002rem);
+              }
+              .line-21-PeK {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                margin-right: 0.0002rem;
+                width: calc(100% - 0.0002rem);
+              }
+              .line-20-jTH {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                margin-right: 0.0002rem;
+                width: calc(100% - 0.0002rem);
+              }
+              .line-19-Gy1 {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                margin-right: 0.0002rem;
+                width: calc(100% - 0.0002rem);
+              }
+            }
+          }
+        }
+      }
+      .auto-group-o9p9-KwH {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        height: 100%;
+        width: 63rem;
+  
+        .bar-chart-sC7 {
+          align-items: center;
+          background-color: #e8e8e8;
+          border: solid 0.1rem #000000;
+          border-radius: 2rem;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          margin-bottom: 2.2rem;
+          padding: 1.7rem 2.7rem 2.1rem 1.6rem;
+          width: 100%;
+  
+          .auto-group-hmjh-Nef {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 5rem;
+            margin: 0rem 0rem 1.6rem 1.7rem;
+            width: calc(100% - 1.7rem);
+  
+            .numdealspurchases-HWj {
+              color: #000000;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.6rem;
+              font-weight: 500;
+              line-height: 1.2125;
+              margin: 0.4rem 12.6rem 0rem 0rem;
+              white-space: nowrap;
+            }
+            .view-more-Q5Z {
+              align-items: center;
+              background-color: #fefffc;
+              border: solid 0.1rem #000000;
+              border-radius: 2rem;
+              box-sizing: border-box;
+              color: #000000;
+              display: flex;
+              flex-shrink: 0;
+              font-family: Inter, 'Source Sans Pro';
+              font-size: 2.2rem;
+              font-weight: 500;
+              height: 100%;
+              justify-content: center;
+              line-height: 1.2125;
+              white-space: nowrap;
+              width: 18.7rem;
+            }
+          }
+          .auto-group-4u4o-GNf {
+            flex-shrink: 0;
+            height: 30.2rem;
+            position: relative;
+            width: 100%;
+  
+            .bar-chart-line-1LF {
+              align-items: center;
+              border-bottom: solid 0.1rem rgba(41, 41, 41, 0.150000006);
+              border-top: solid 0.1rem rgba(41, 41, 41, 0.150000006);
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              height: 25.6rem;
+              left: 5.8rem;
+              padding: 5.1rem 0;
+              position: absolute;
+              row-gap: 5rem;
+              top: 0.6rem;
+              width: 52.9rem;
+  
+              .line-10-hTy {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                width: 100%;
+              }
+              .line-9-SwM {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                width: 100%;
+              }
+              .line-8-zhy {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                width: 100%;
+              }
+              .line-7-MYX {
+                background-color: rgba(41, 41, 41, 0.150000006);
+                flex-shrink: 0;
+                height: 0.1rem;
+                width: 100%;
+              }
+            }
+            .row-GfV {
+              align-items: flex-end;
+              display: flex;
+              flex-direction: column;
+              height: 21.7rem;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 4.8rem;
+  
+              .item-1000-ndq {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-bottom: 3.8rem;
+                white-space: nowrap;
+              }
+              .item-800-7w1 {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 0.2rem 2.9rem 0rem;
+                white-space: nowrap;
+              }
+              .auto-group-hwnb-qMD {
+                align-items: flex-start;
+                display: flex;
+                flex-shrink: 0;
+                margin: 0rem 0.2rem 0.6rem 0rem;
+                width: calc(100% - 0.2rem);
+  
+                .frequency-9Mu {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1.1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin-right: 1.3rem;
+                  max-width: 1.4rem;
+                }
+                .item-600-fLF {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin-top: 0.9rem;
+                  white-space: nowrap;
+                }
+              }
+              .item-400-BJb {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 0.2rem 3.8rem 0rem;
+                white-space: nowrap;
+              }
+              .item-200-VKH {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-right: 0.2rem;
+                white-space: nowrap;
+              }
+            }
+            .col-24K {
+              align-items: center;
+              display: flex;
+              height: 4.7rem;
+              left: 3.9rem;
+              position: absolute;
+              top: 25.5rem;
+              width: 52.2rem;
+  
+              .item-0-YHZ {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 5.1rem 3.4rem 0rem;
+                white-space: nowrap;
+              }
+              .item-2-4Wo {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 6.7rem 0.8rem 0rem;
+                white-space: nowrap;
+              }
+              .item-4-PZ5 {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 6.7rem 0.8rem 0rem;
+                white-space: nowrap;
+              }
+              .item-6-X9V {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 1.6rem 0.8rem 0rem;
+                white-space: nowrap;
+              }
+              .auto-group-eci7-G75 {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                margin: 1.3rem 1.7rem 0rem 0rem;
+  
+                .item-8-bf9 {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 0rem 0.7rem 0.1rem;
+                  white-space: nowrap;
+                }
+                .numdealspurchases-8uy {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1.1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  white-space: nowrap;
+                }
+              }
+              .item-10-Uiw {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 6.7rem 0.8rem 0rem;
+                white-space: nowrap;
+              }
+              .item-12-pH1 {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin: 0rem 6.7rem 0.8rem 0rem;
+                white-space: nowrap;
+              }
+              .item-14-9KH {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2125;
+                margin-bottom: 0.8rem;
+                white-space: nowrap;
+              }
+            }
+            .bar-HRV {
+              align-items: flex-end;
+              display: flex;
+              height: 16.0897rem;
+              left: 9.7495rem;
+              position: absolute;
+              top: 9.926rem;
+              width: 46.0485rem;
+  
+              .rectangle-oud {
+                background-color: #000000;
+                flex-shrink: 0;
+                height: 15.974rem;
+                margin: 0rem 6.25rem 0.116rem 0rem;
+                width: 1.0505rem;
+              }
+              .rectangle-vzF {
+                background-color: #000000;
+                flex-shrink: 0;
+                height: 7.5911rem;
+                margin: 0rem 6.252rem 0.116rem 0rem;
+                width: 0.998rem;
+              }
+              .rectangle-fS3 {
+                background-color: #000000;
+                flex-shrink: 0;
+                height: 14.67rem;
+                margin: 0rem 6.502rem 0.046rem 0rem;
+                width: 0.998rem;
+              }
+              .rectangle-zUK {
+                background-color: #000000;
+                flex-shrink: 0;
+                height: 5.2626rem;
+                margin: 0rem 6.449rem 0.053rem 0rem;
+                width: 1.0505rem;
+              }
+              .rectangle-Xj9 {
+                background-color: #292929;
+                flex-shrink: 0;
+                height: 10.432rem;
+                margin: 0rem 7.002rem 0.084rem 0rem;
+                width: 0.998rem;
+              }
+              .rectangle-fqM {
+                background-color: #292929;
+                flex-shrink: 0;
+                height: 11.8757rem;
+                margin: 0rem 6.449rem 0.04rem 0rem;
+                width: 1.0505rem;
+              }
+              .rectangle-R3q {
+                background-color: #292929;
+                flex-shrink: 0;
+                height: 8.6157rem;
+                width: 0.998rem;
+              }
+            }
+          }
+        }
+        .scatter-plot-j4X {
+          background-color: #e8e8e8;
+          border: solid 0.1rem #000000;
+          border-radius: 2rem;
+          box-sizing: border-box;
+          flex-shrink: 0;
+          height: 40.6rem;
+          padding: 1.6rem 2.7rem 2.4rem 1.6rem;
+          width: 100%;
+  
+          .scatter-plot-TWK {
+            align-items: flex-end;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+  
+            .auto-group-xq15-ce7 {
+              align-items: center;
+              display: flex;
+              flex-shrink: 0;
+              height: 5rem;
+              margin: 0rem 0rem 1.4rem 1.7rem;
+              width: calc(100% - 1.7rem);
+  
+              .numdealspurchases-8sM {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 2.6rem;
+                font-weight: 500;
+                line-height: 1.2125;
+                margin-right: 12.6rem;
+                white-space: nowrap;
+              }
+              .view-more-fsH {
+                align-items: center;
+                background-color: #fefffc;
+                border: solid 0.1rem #000000;
+                border-radius: 2rem;
+                box-sizing: border-box;
+                color: #000000;
+                display: flex;
+                flex-shrink: 0;
+                font-family: Inter, 'Source Sans Pro';
+                font-size: 2.2rem;
+                font-weight: 500;
+                height: 100%;
+                justify-content: center;
+                line-height: 1.2125;
+                white-space: nowrap;
+                width: 18.7rem;
+              }
+            }
+            .auto-group-uwpo-k83 {
+              flex-shrink: 0;
+              height: 30.2rem;
+              position: relative;
+              width: 100%;
+  
+              .row-Upj {
+                align-items: flex-end;
+                display: flex;
+                flex-direction: column;
+                height: 21.7rem;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 4.8rem;
+  
+                .item-1000-cR9 {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin-bottom: 3.8rem;
+                  white-space: nowrap;
+                }
+                .item-800-9fy {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 0.2rem 2.9rem 0rem;
+                  white-space: nowrap;
+                }
+                .auto-group-sez1-UiF {
+                  align-items: flex-start;
+                  display: flex;
+                  flex-shrink: 0;
+                  margin: 0rem 0.2rem 0.6rem 0rem;
+                  width: calc(100% - 0.2rem);
+  
+                  .frequency-oVd {
+                    color: #000000;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    line-height: 1.2125;
+                    margin-right: 1.3rem;
+                    max-width: 1.4rem;
+                  }
+                  .item-600-Kis {
+                    color: #000000;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.2125;
+                    margin-top: 0.9rem;
+                    white-space: nowrap;
+                  }
+                }
+                .item-400-4Af {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 0.2rem 3.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-200-ncT {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin-right: 0.2rem;
+                  white-space: nowrap;
+                }
+              }
+              .col-8AX {
+                align-items: center;
+                display: flex;
+                height: 4.7rem;
+                left: 3.9rem;
+                position: absolute;
+                top: 25.5rem;
+                width: 52.2rem;
+  
+                .item-0-Swu {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 5.1rem 3.4rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-2-nVy {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 6.7rem 0.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-4-i8j {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 6.7rem 0.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-6-qj9 {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 1.6rem 0.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .auto-group-puy9-BHD {
+                  align-items: center;
+                  display: flex;
+                  flex-direction: column;
+                  flex-shrink: 0;
+                  margin: 1.3rem 1.7rem 0rem 0rem;
+  
+                  .item-8-Voh {
+                    color: #000000;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.2125;
+                    margin: 0rem 0rem 0.7rem 0.1rem;
+                    white-space: nowrap;
+                  }
+                  .numdealspurchases-2Hq {
+                    color: #000000;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    line-height: 1.2125;
+                    white-space: nowrap;
+                  }
+                }
+                .item-10-kjd {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 6.7rem 0.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-12-taw {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin: 0rem 6.7rem 0.8rem 0rem;
+                  white-space: nowrap;
+                }
+                .item-14-cmq {
+                  color: #000000;
+                  flex-shrink: 0;
+                  font-family: Inter, 'Source Sans Pro';
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.2125;
+                  margin-bottom: 0.8rem;
+                  white-space: nowrap;
+                }
+              }
+              .scatter-lines-AYT {
+                align-items: center;
+                border-bottom: solid 0.1rem rgba(41, 41, 41, 0.150000006);
+                border-top: solid 0.1rem rgba(41, 41, 41, 0.150000006);
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                height: 25.6rem;
+                left: 5.8rem;
+                padding: 5.1rem 0;
+                position: absolute;
+                row-gap: 5rem;
+                top: 0.6rem;
+                width: 52.9rem;
+  
+                .line-16-sBy {
+                  background-color: rgba(41, 41, 41, 0.150000006);
+                  flex-shrink: 0;
+                  height: 0.1rem;
+                  width: 100%;
+                }
+                .line-15-1oy {
+                  background-color: rgba(41, 41, 41, 0.150000006);
+                  flex-shrink: 0;
+                  height: 0.1rem;
+                  width: 100%;
+                }
+                .line-14-Ags {
+                  background-color: rgba(41, 41, 41, 0.150000006);
+                  flex-shrink: 0;
+                  height: 0.1rem;
+                  width: 100%;
+                }
+                .line-13-gv7 {
+                  background-color: rgba(41, 41, 41, 0.150000006);
+                  flex-shrink: 0;
+                  height: 0.1rem;
+                  width: 100%;
+                }
+              }
+              .scatter-plot-beads-1hV {
+                height: 22.1945rem;
+                left: 6.2rem;
+                object-fit: contain;
+                position: absolute;
+                top: 2.8rem;
+                vertical-align: top;
+                width: 52.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
