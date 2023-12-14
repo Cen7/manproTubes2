@@ -8,7 +8,7 @@
   <title>Home Page</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700"/>
-  <link rel="stylesheet" href="styles/home-page.css"/>
+  <link rel="stylesheet" href="/css/home-page.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <div class="navbar">
@@ -33,7 +33,7 @@
       <div class="section">
         <div class="head-section">
           <p class="title-section">Jumlah produk ikan (fish) yang dibeli oleh tiap kelompok Education</p>
-          <div class="view-more" href="data-summary">View more</div>
+          <button onclick="dataSummary()" class="view-more">View more</button>
         </div>
         <table class="content-section">
           <tr>
@@ -69,7 +69,7 @@
       <div class="section" id="bar-chart">
         <div class="head-section">
           <p class="title-section">NumDealsPurchases</p>
-          <div class="view-more">View more</div>
+          <button onclick="dataSummary()"   class="view-more">View more</button>
         </div>
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
       </div>
@@ -77,10 +77,15 @@
       <div class="section" id="scatter-plot">
         <div class="head-section">
           <p class="title-section">NumDealsPurchases</p>
-          <div class="view-more">View more</div>
+          <button onclick="dataSummary()"   class="view-more">View more</button>
         </div>
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
       </div>
     </div>
   </div>
 </body>
+<script>
+function dataSummary(){
+  window.location.href='data-summary'
+}
+</script>
