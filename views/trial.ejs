@@ -1,0 +1,55 @@
+<!-- views/powerbi.ejs -->
+
+<html>
+<head>
+    <title>Power BI Embedded Example</title>
+</head>
+<body>
+    <div id="dashboardContainer">tes</div>
+
+    <!-- Add this script tag to your HTML file -->
+    <script src="https://microsoft.github.io/PowerBI-JavaScript/demo/node_modules/powerbi-client/dist/powerbi.js">
+        // Add this before the powerbi.embed call
+        const filters = {
+            $schema: "http://powerbi.com/product/schema#basic",
+            target: {
+                table: "Sales",
+                column: "Country"
+            },
+            operator: "In",
+            values: ["USA", "Canada"]
+        };
+
+        embedConfig.settings = {
+            filterPaneEnabled: true,
+            navContentPaneEnabled: false
+        };
+
+        embedConfig.pageName = 'DashboardSection1'; // Specify the report page
+
+        embedConfig.extraSettings = [
+            {
+                filter: filters
+            }
+        ];
+
+        // Add this script to the <script> tag in your EJS file
+        const embedConfig = {
+            type: 'dashboard',
+            id: '75f351ac-b2fc-4ca9-91a6-aa744a2384dd',
+            embedUrl: 'https://app.powerbi.com/dashboardEmbed?dashboardId=75f351ac-b2fc-4ca9-91a6-aa744a2384dd',
+            accessToken: 'your-access-token',
+            tokenType: models.TokenType.Embed,
+            settings: {
+                filterPaneEnabled: false,
+                navContentPaneEnabled: true
+            }
+        };
+
+        const dashboardContainer = document.getElementById('dashboardContainer');
+        const dashboard = powerbi.embed(dashboardContainer, embedConfig);
+
+    </script>
+
+</body>
+</html>
