@@ -5,18 +5,17 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <title>Data Summary</title>
+  <title>Bar Chart</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
-  <link rel="stylesheet" href="css/data-summary.css"/>
+  <link rel="stylesheet" href="css/bar-chart.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <div class="navbar">
 </div>
 <body>
   <div class="home-page">
-    <p class="dashboard">Data Summary</p>
-
+    <p class="dashboard">Bar Chart</p>
     <div class="selection">
       <label>Row:</label>
       <select class="row" id="rowSelect" placeholder="Select a feature">
@@ -38,50 +37,58 @@
         <option value="max">Max</option>
         <option value="min">Min</option>
       </select>
-      <button onclick="generateTable()" class="generate">Generate Table</button>
+      <button onclick="generateChart()" class="generate">Generate Chart</button>
     </div>
-
-    <table id="resultTable"></table>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
   </div>
 
   <script>
-    function generateTable() {
+    function generateChart() {
       const rowSelect = document.getElementById("rowSelect");
       const colSelect = document.getElementById("colSelect");
       const agrSelect = document.getElementById("agrSelect");
-      const resultTable = document.getElementById("resultTable");
-  
-      // Get selected values
+
       const selectedRow = rowSelect.value;
       const selectedCol = colSelect.value;
       const selectedAgr = agrSelect.value;
   
-      // Make an AJAX request to the server to get the aggregated data based on the selected parameters
-      fetch(`/getData?row=${selectedRow}&col=${selectedCol}&agr=${selectedAgr}`)
+      fetch(`/getDataForChart?row=${selectedRow}&col=${selectedCol}&agr=${selectedAgr}`)
         .then(response => response.json())
         .then(data => {
-          // Generate the table based on the received data
-          generateTableFromData(resultTable, data, selectedRow, selectedCol, selectedAgr);
+          // Extract labels and data from the response
+          const labels = data.map(item => item.label);
+          const chartData = data.map(item => item.value);
+  
+          // Create a bar chart
+          createBarChart(labels, chartData);
         })
         .catch(error => console.error("Error fetching data:", error));
     }
   
-    function generateTableFromData(table, data, selectedRow, selectedCol, selectedAgr) {
-      // Clear existing table content
-      table.innerHTML = "";
-  
-      // Create table header
-      const headerRow = table.insertRow();
-      headerRow.insertCell().innerText = selectedRow;
-      headerRow.insertCell().innerText = `${selectedAgr}(${selectedCol})`;
-  
-      // Populate table rows with data
-      data.forEach(item => {
-        const row = table.insertRow();
-        row.insertCell().innerText = item[selectedRow];
-        row.insertCell().innerText = item.aggregatedValue;
+    function createBarChart(labels, data) {
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Chart Data',
+            data: data,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
       });
     }
   </script>
-  
 </body>

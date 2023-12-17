@@ -41,51 +41,105 @@
             <th>Count of Fish</th>
           </tr>
           <tr>
-            <td>10</td>
+            <td>55</td>
             <td>Primary School</td>
           </tr>
           <tr>
-            <td>10</td>
-            <td>Primary School</td>
+            <td>49</td>
+            <td>Junior High School</td>
           </tr>
           <tr>
-            <td>10</td>
-            <td>Primary School</td>
+            <td>44</td>
+            <td>High School</td>
           </tr>
           <tr>
+            <td>24</td>
+            <td>University</td>
+          </tr>
+          <!-- <tr>
             <td>10</td>
             <td>Primary School</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Primary School</td>
-          </tr>
+          </tr> -->
         </table>
       </div>
     </div>
 
 
     <div class="content-right">
-      <div class="section" id="bar-chart">
+      <div class="section chart" id="bar-chart">
         <div class="head-section">
           <p class="title-section">NumDealsPurchases</p>
           <button onclick="dataSummary()"   class="view-more">View more</button>
         </div>
-        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <canvas id="bar" style="width:100%;max-width:600px"></canvas>
       </div>
 
-      <div class="section" id="scatter-plot">
+      <div class="section chart" id="scatter-plot">
         <div class="head-section">
           <p class="title-section">NumDealsPurchases</p>
           <button onclick="dataSummary()"   class="view-more">View more</button>
         </div>
-        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <canvas id="scatter" style="width:100%;max-width:600px"></canvas>
       </div>
     </div>
   </div>
 </body>
 <script>
-function dataSummary(){
-  window.location.href='data-summary'
-}
+  const xValues = ["Primary School", "Junior High School", "High School", "University"];
+  const yValues = [55, 49, 44, 24];
+  const barColors = ["red", "green","blue","orange"];
+
+  new Chart("bar", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      legend: {display: false},
+      title: {
+        display: true,
+        text: "Sum of Fish"
+      }
+    }
+  });
+
+  function dataSummary(){
+    window.location.href='data-summary'
+  }
+
+  const xyValues = [
+  {x:50, y:7},
+  {x:60, y:8},
+  {x:70, y:8},
+  {x:80, y:9},
+  {x:90, y:9},
+  {x:100, y:9},
+  {x:110, y:10},
+  {x:120, y:11},
+  {x:130, y:14},
+  {x:140, y:14},
+  {x:150, y:15}
+];
+
+new Chart("scatter", {
+  type: "scatter",
+  data: {
+    datasets: [{
+      pointRadius: 4,
+      pointBackgroundColor: "rgb(0,0,255)",
+      data: xyValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      xAxes: [{ticks: {min: 40, max:160}}],
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+});
 </script>

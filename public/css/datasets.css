@@ -1,7 +1,29 @@
-body {
+* {
     margin: 0;
     padding: 0;    
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: Inter, 'Source Sans Pro';
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  background-color: #292929;
+  flex-shrink: 0;
+}
+
+.home-page {
+  box-sizing: border-box;
+  margin: 2.3rem 7rem;
+  display: grid;
+  gap: 1.5rem;
+  background-color: #fefffc;
+}
+.dashboard {
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
 
 }
 
@@ -9,8 +31,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    margin-top: 80px;
 }
 .search-box {
     display: flex;
@@ -18,7 +38,7 @@ body {
     align-items: center;
 }
 #search-input {
-    height: 40px;
+    height: 25px;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -30,14 +50,17 @@ body {
     outline: none;
 }
 #go {
-    height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px 20px;
-    background-color: #4b88fd;
-    color: #fff;
-    font-size: 16px;
+    background-color: #292929;
     cursor: pointer;
+    font-size: 1.12rem;
+    color: #fefffc;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    flex-shrink: 0;
 }
 #total-rows {
     margin: 10px;    font-family: 'Source Sans 3', sans-serif;
@@ -46,10 +69,12 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
 }
-th,
-td {
+th, td {
   padding: 12px;
   text-align: left;
 }
@@ -60,10 +85,20 @@ th {
   text-transform: uppercase;
   font-size: 14px;
 }
-td {
-  font-size: 16px;
-  border-bottom: 1px solid #ddd;
+tr:first-child {
+  border-top: none;
+  border-bottom: 2.5px solid #2929292d;
 }
+tr{
+  height: 2rem;
+  border: 1px solid #2929292d;
+  border-left: 0;
+  border-right: 0;
+}
+tr:last-child {
+  border-bottom: none;
+ }
+
 .highlight {
   background-color: rgba(70, 130, 180, 0.2);
 }
