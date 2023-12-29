@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Data Summary</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="css/data-summary.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<div class="navbar">
+</div>
+<body>
+  <div class="home-page">
+    <p class="dashboard">Data Summary</p>
+
+    <div class="selection">
+      <label>Row:</label>
+      <select class="row" id="rowSelect" placeholder="Select a feature">
+        <% columns.forEach(column => { %>
+          <option value="<%= column %>"><%= column %></option>
+        <% }); %>
+      </select>
+      <label>Column:</label>
+      <select class="col" id="colSelect">
+        <% columns.forEach(column => { %>
+          <option value="<%= column %>"><%= column %></option>
+        <% }); %>
+      </select>
+      <label>Aggregate:</label>
+      <select class="agr" id="agrSelect">
+        <option value="sum">Sum</option>
+        <option value="count">Count</option>
+        <option value="avg">Average</option>
+        <option value="max">Max</option>
+        <option value="min">Min</option>
+      </select>
+      <button onclick="generateTable()" class="generate">Generate Table</button>
+    </div>
+
+    <table id="resultTable"></table>
+  </div>
+
+  <script>
+    function generateTable() {
+      const rowSelect = document.getElementById("rowSelect");
+      const colSelect = document.getElementById("colSelect");
+      const agrSelect = document.getElementById("agrSelect");
+      const resultTable = document.getElementById("resultTable");
+  
+      // Get selected values
+      const selectedRow = rowSelect.value;
+      const selectedCol = colSelect.value;
+      const selectedAgr = agrSelect.value;
+  
+      // Make an AJAX request to the server to get the aggregated data based on the selected parameters
+      fetch(`/getData?row=${selectedRow}&col=${selectedCol}&agr=${selectedAgr}`)
+        .then(response => response.json())
+        .then(data => {
+          // Generate the table based on the received data
+          generateTableFromData(resultTable, data, selectedRow, selectedCol, selectedAgr);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    }
+  
+    function generateTableFromData(table, data, selectedRow, selectedCol, selectedAgr) {
+      // Clear existing table content
+      table.innerHTML = "";
+  
+      // Create table header
+      const headerRow = table.insertRow();
+      headerRow.insertCell().innerText = selectedRow;
+      headerRow.insertCell().innerText = `${selectedAgr}(${selectedCol})`;
+  
+      // Populate table rows with data
+      data.forEach(item => {
+        const row = table.insertRow();
+        row.insertCell().innerText = item[selectedRow];
+        row.insertCell().innerText = item.aggregatedValue;
+      });
+    }
+  </script>
+  
+</body>

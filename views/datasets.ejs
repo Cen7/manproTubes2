@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Dataset</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="css/datasets.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<div class="navbar">
+</div>
+<body>
+    <div class="home-page">
+            <p class="dashboard">Dataset</p>
+
+            <!-- search bar -->
+            <div class="search-bar">
+                <form id="searchForm">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search data...">
+                        <button id="go" class="search-btn" type="button">Go</button>
+                    </div>
+                </form>
+               
+            </div>
+
+            <!-- search results -->
+            <div class="result-aria">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Table Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for (let tableName of tables) { %>
+                      <tr>
+                        <td><%= tableName %></td>
+                      </tr>
+                    <% } %>
+                  </tbody>
+                </table>
+            </div>
+    </div>
+    <script>
+        console.log('Im in');
+
+        document.getElementById("go").addEventListener("click", searchTable);
+
+        function searchTable() {
+        // Get the input value and convert it to lowercase
+        const input = document.getElementById("search-input").value.toLowerCase();
+        console.log(input);
+        
+        // Get all table rows and iterate through them
+        const rows = document.getElementsByTagName("tr");
+
+        for (let i = 0; i < rows.length; i++) {
+            // Get the text content of each row and convert it to lowercase
+            const rowText = rows[i].textContent.toLowerCase();
+            
+            // If the input value is found in the row text, highlight the row
+            if (rowText.includes(input)) {
+            rows[i].classList.add("highlight");
+            } else {
+            rows[i].classList.remove("highlight");
+            }
+        }
+        }
+
+    </script> 
+</body>
