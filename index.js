@@ -5,7 +5,7 @@ import session from "express-session";
 
 const app = express();
  
-const port = 8080;
+const port = 355;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));
@@ -167,6 +167,8 @@ app.get("/scatter-plot", async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
+
 
 app.get("/getDataForScatterPlot", async (req, res) => {
   try {
