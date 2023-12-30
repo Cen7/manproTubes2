@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
   <link rel="stylesheet" href="css/bar-chart.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="../d3.v5.js" defer></script>
+  <script src="public/scatter-plot.js" defer></script>
+  <script src="https://d3js.org/d3.v5.min.js" defer></script>
+
 </head>
 <div class="navbar">
 </div>
@@ -39,12 +43,12 @@
       </select>
       <button onclick="generateScatterPlot()" class="generate">Generate Scatter Plot</button>
     </div>
-    <div class="chart-container">
+    <div class="chart">
       <canvas id="myChart"></canvas>
     </div>
   </div>
 
-  <script>
+  <!-- <script>
     function generateScatterPlot() {
       const rowSelect = document.getElementById("rowSelect");
       const colSelect = document.getElementById("colSelect");
@@ -94,5 +98,5 @@
         }
       });
     }
-  </script>
-</body>
+  </script> -->
+</body> 
