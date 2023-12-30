@@ -173,11 +173,11 @@ app.get("/scatter-plot", async (req, res) => {
 app.get("/getDataForScatterPlot", async (req, res) => {
   try {
     const selectedRow = req.query.row;
-    const selectedColX = req.query.colX;
-    const selectedColY = req.query.colY;
+    const selectedCol = req.query.col;
+    const selectedAgr = req.query.agr;
 
-    // Construct the SQL query based on the selectedRow, selectedColX, and selectedColY
-    const sqlQuery = `SELECT ${selectedRow}, ${selectedColX} AS xValue, ${selectedColY} AS yValue FROM marketing_campaign`;
+    // Construct the SQL query based on the selectedRow, selectedCol, and selectedAgr
+    const sqlQuery = `SELECT ${selectedRow} AS xValue, ${selectedCol} AS yValue FROM marketing_campaign`;
 
     pool.query(sqlQuery, (err, result) => {
       if (err) {
@@ -193,6 +193,7 @@ app.get("/getDataForScatterPlot", async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 
 
 app.listen(port, () => {
