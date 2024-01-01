@@ -176,14 +176,15 @@ app.get("/scatter-plot", async (req, res) => {
   }
 });
 
+// Your Server-side Code
 app.get("/getDataForScatterPlot", async (req, res) => {
   try {
     const selectedRow = req.query.row;
-    const selectedColX = req.query.colX;
-    const selectedColY = req.query.colY;
+    const selectedCol = req.query.col;
+    const selectedAgr = req.query.agr;
 
-    // Construct the SQL query based on the selectedRow, selectedColX, and selectedColY
-    const sqlQuery = `SELECT ${selectedRow}, ${selectedColX} AS xValue, ${selectedColY} AS yValue FROM marketing_campaign`;
+    // Construct the SQL query based on the selectedRow, selectedCol, and selectedAgr
+    const sqlQuery = `SELECT ${selectedRow} AS xValue, ${selectedCol} AS yValue FROM marketing_campaign`;
 
     pool.query(sqlQuery, (err, result) => {
       if (err) {
@@ -231,13 +232,13 @@ function uploadCsv(path){
       else{
         let query="INSERT INTO manpro(Year_Birth,Education,Marital_Status,Income,Kidhome,Teenhome,Dt_Customer,Recency,MntWines,MntFruits,MntMeatProducts,MntFishProducts,MntSweetProducts,MntGoldProds,NumDealsPurchases,NumWebPurchases,NumCatalogPurchases,NumStorePurchases,NumWebVisitsMonth,AcceptedCmp3,AcceptedCmp4,AcceptedCmp5,AcceptedCmp1,AcceptedCmp2,Complain,Z_CostContact,Z_Revenue,Response) Values ?"
         connection.query(query,[csvDataColl],(error,res)=>{
-
         })
       }
     })
   })
   stream.pipe(fileStream)
 }
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

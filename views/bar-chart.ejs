@@ -60,7 +60,7 @@
           // Extract labels and data from the response
           const labels = data.map(item => item.label);
           const chartData = data.map(item => item.value);
-  
+          console.log(chartData)
           // Create a bar chart
           createBarChart(labels, chartData);
         })
