@@ -20,7 +20,18 @@
       <div class="upload-view">
         <div class="upload">
           <p class="upload-view-text">Upload new data</p>
-          <div class="upload-view-button">Upload</div>
+          <form action="/import-csv" method="post" enctype="multipart/form-data">
+          <div class="upload-view-button">
+            <input
+            type="file"
+            class="form-control"
+            name="file"
+            accept=".csv"
+            />
+          </div>
+          <div class="button-submit">
+            <input type="submit" class="submit-button" value="Store file"/></div>
+        </form>
         </div>
         <div class="line">
         </div>

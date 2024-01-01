@@ -2,14 +2,22 @@ import mysql from "mysql";
 import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
+import multer from "multer";
+import path from "path";
+import csv from"fast-csv";
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const fs = require('fs');
 const app = express();
- 
+
 const port = 8080;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.use(
   session({
@@ -193,7 +201,43 @@ app.get("/getDataForScatterPlot", async (req, res) => {
   }
 });
 
-
+let storage=multer.diskStorage({
+  destination:(req,file,callback)=> {
+    callback(null,"./uploads/")
+  },
+  filename:(req,file,callback)=>{
+    callback(null,file.fieldname+"-"+Date.now +path.extname(file.originalname))
+  }
+});
+let upload=multer({
+  storage:storage
+}) ;
+app.post('/import-csv',upload.single('file'),(req,res)=>{
+console.log(req.file.path)
+uploadCsv(__dirname+"/uploads/"+req.file.filename)
+});
+function uploadCsv(path){
+  let stream=fs.createReadStream(path)
+  let csvDataColl=[]
+  let fileStream=csv
+  .parse()
+  .on('data',function(data){
+    csvDataColl.push(data)
+  })
+  .on('end',function(){
+    pool.getConnection((error,connection)=>{
+      if(error){
+        console.log(error)
+      }
+      else{
+        let query="INSERT INTO manpro(Year_Birth,Education,Marital_Status,Income,Kidhome,Teenhome,Dt_Customer,Recency,MntWines,MntFruits,MntMeatProducts,MntFishProducts,MntSweetProducts,MntGoldProds,NumDealsPurchases,NumWebPurchases,NumCatalogPurchases,NumStorePurchases,NumWebVisitsMonth,AcceptedCmp3,AcceptedCmp4,AcceptedCmp5,AcceptedCmp1,AcceptedCmp2,Complain,Z_CostContact,Z_Revenue,Response) Values ?"
+        connection.query(query,[csvDataColl],(error,res)=>{
+        })
+      }
+    })
+  })
+  stream.pipe(fileStream)
+}
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
