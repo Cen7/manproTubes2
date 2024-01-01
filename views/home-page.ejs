@@ -79,16 +79,16 @@
     <div class="content-right">
       <div class="section chart" id="bar-chart">
         <div class="head-section">
-          <p class="title-section">NumDealsPurchases</p>
-          <button onclick="dataSummary()"   class="view-more">View more</button>
+          <p class="title-section">Bar Chart</p>
+          <button onclick="barChart()"   class="view-more">View more</button>
         </div>
         <canvas id="bar" style="width:100%;max-width:600px"></canvas>
       </div>
 
       <div class="section chart" id="scatter-plot">
         <div class="head-section">
-          <p class="title-section">NumDealsPurchases</p>
-          <button onclick="dataSummary()"   class="view-more">View more</button>
+          <p class="title-section">Scatter Plot</p>
+          <button onclick="scatterPlot()"   class="view-more">View more</button>
         </div>
         <canvas id="scatter" style="width:100%;max-width:600px"></canvas>
       </div>
@@ -122,11 +122,19 @@
     window.location.href='data-summary'
   }
 
+  function barChart(){
+    window.location.href='bar-chart'
+  }
+
+  function scatterPlot(){
+    window.location.href='scatter-plot'
+  }
+
   const xyValues = [
   {x:50, y:7},
   {x:60, y:8},
   {x:70, y:8},
-  {x:80, y:9},
+  {x:70, y:9},
   {x:90, y:9},
   {x:100, y:9},
   {x:110, y:10},
