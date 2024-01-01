@@ -5,13 +5,12 @@ import session from "express-session";
 import multer from "multer";
 import path from "path";
 import csv from"fast-csv";
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const fs = require('fs');
 const app = express();
-
 const port = 8080;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
@@ -230,8 +229,13 @@ function uploadCsv(path){
         console.log(error)
       }
       else{
-        let query="INSERT INTO manpro(Year_Birth,Education,Marital_Status,Income,Kidhome,Teenhome,Dt_Customer,Recency,MntWines,MntFruits,MntMeatProducts,MntFishProducts,MntSweetProducts,MntGoldProds,NumDealsPurchases,NumWebPurchases,NumCatalogPurchases,NumStorePurchases,NumWebVisitsMonth,AcceptedCmp3,AcceptedCmp4,AcceptedCmp5,AcceptedCmp1,AcceptedCmp2,Complain,Z_CostContact,Z_Revenue,Response) Values ?"
+        let query="INSERT INTO marketing_campaign(ID,Year_Birth,Education,Marital_Status,Income,Kidhome,Teenhome,Dt_Customer,Recency,MntWines,MntFruits,MntMeatProducts,MntFishProducts,MntSweetProducts,MntGoldProds,NumDealsPurchases,NumWebPurchases,NumCatalogPurchases,NumStorePurchases,NumWebVisitsMonth,AcceptedCmp3,AcceptedCmp4,AcceptedCmp5,AcceptedCmp1,AcceptedCmp2,Complain,Z_CostContact,Z_Revenue,Response) VALUES ?"
         connection.query(query,[csvDataColl],(error,res)=>{
+
+          if (error) {
+            console.log(error);
+          }
+
         })
       }
     })
