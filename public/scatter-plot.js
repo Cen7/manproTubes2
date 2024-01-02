@@ -269,9 +269,3 @@ async function drawScatter () {
 }
 
 drawScatter()
-
-
-  Did we gain insight into our original question? Yes! We wanted to see if we were correct in guessing that high humidity would likely coincide with a high dew point.
-
-  Looking at the plotted dots, they do seem to group around an invisible line from the bottom left to the top right of the chart.
-*/

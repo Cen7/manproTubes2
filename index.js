@@ -5,7 +5,7 @@ import session from "express-session";
 
 const app = express();
  
-const port = 355;
+const port = 300;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));

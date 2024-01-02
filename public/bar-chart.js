@@ -1,12 +1,3 @@
-/*
-  ACCESSIBILITY FEATURES ADDED
-
-  Download the ChromeVox extension at https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en to see how the screen reader can work with these histograms
-
-  If you are on macOS and have this extension installed, life will be easier for you if you set the ChromeVox modifier key to "Ctrl+Shift" and set Toggle ChromeVox active or inactive with "ChromeVox+A". Then, you can just press "Ctrl+Shift" and then the "A" key to toggle whether it is active or not.
-*/
-
-
 // Accessibility win! When the user loads the page, the screen reader says: "Example oh-three - making a bar chart."
 async function drawBars() {
     // Access data
