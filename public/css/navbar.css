@@ -8,9 +8,6 @@ html, body{
     text-decoration: none;
 }
 
-.bar{
-    color: white;
-}
 
 header{
     background-color: black;
@@ -34,12 +31,13 @@ header{
 .barpilihan > a{
     align-self: stretch;
     padding: 22px 25px;
-    color: #425A7D;
+    color: white;
 }
 
 .barpilihan > a:hover {
     background-color: white;
     box-shadow:0 5px 0 grey;
+    color: black;
 }
 .barprofile{
     align-items: center;
