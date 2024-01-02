@@ -20,92 +20,212 @@
       <div class="upload-view">
         <div class="upload">
           <p class="upload-view-text">Upload new data</p>
-          <div class="upload-view-button">Upload</div>
+          <button class="upload-view-button" onclick="dataSets()">Upload</button>
         </div>
         <div class="line">
         </div>
         <div class="view">
           <p class="upload-view-text">View data sets</p>
-          <div class="upload-view-button">View</div>
+          <button class="upload-view-button" onclick="dataSets()">View</button>
         </div>
       </div>
 
       <div class="section">
         <div class="head-section">
-          <p class="title-section">Jumlah produk ikan (fish) yang dibeli oleh tiap kelompok Education</p>
+          <p class="title-section" id="summaryTitle"></p>
           <button onclick="dataSummary()" class="view-more">View more</button>
         </div>
-        <table class="content-section">
-          <tr>
-            <th>Education</th>
-            <th>Count of Fish</th>
-          </tr>
-          <tr>
-            <td>55</td>
-            <td>Primary School</td>
-          </tr>
-          <tr>
-            <td>49</td>
-            <td>Junior High School</td>
-          </tr>
-          <tr>
-            <td>44</td>
-            <td>High School</td>
-          </tr>
-          <tr>
-            <td>24</td>
-            <td>University</td>
-          </tr>
-          <!-- <tr>
-            <td>10</td>
-            <td>Primary School</td>
-          </tr> -->
-        </table>
+        <div id="tableData" tableRow = "<%= tableRow%>" tableCol = "<%= tableCol%>" tableAgr = "<%= tableAgr%>">
+          <table id="resultTable" class="content-section">
+          </table>
+        </div>
+        
+        
       </div>
     </div>
-
 
     <div class="content-right">
       <div class="section chart" id="bar-chart">
         <div class="head-section">
-          <p class="title-section">Bar Chart</p>
-          <button onclick="barChart()"   class="view-more">View more</button>
+          <p class="title-section" id="barTitle"></p>
+          <button onclick="barChart()" class="view-more">View more</button>
         </div>
+        <div id="barData" barRow = "<%= barRow%>" barCol = "<%= barCol%>" barAgr = "<%= barAgr%>"></div>
         <canvas id="bar" style="width:100%;max-width:600px"></canvas>
       </div>
 
       <div class="section chart" id="scatter-plot">
         <div class="head-section">
-          <p class="title-section">Scatter Plot</p>
-          <button onclick="scatterPlot()"   class="view-more">View more</button>
+          <p class="title-section" id="scatterTitle"></p>
+          <button onclick="scatterPlot()" class="view-more">View more</button>
         </div>
+        <div id="scatterData" scatterRow = "<%= scatterRow%>" scatterCol = "<%= scatterCol%>" scatterAgr = "<%= scatterAgr%>"></div>
         <canvas id="scatter" style="width:100%;max-width:600px"></canvas>
       </div>
     </div>
   </div>
 </body>
-<script>
-  const xValues = ["Primary School", "Junior High School", "High School", "University"];
-  const yValues = [55, 49, 44, 24];
-  const barColors = ["red", "green","blue","orange"];
 
-  new Chart("bar", {
-    type: "bar",
-    data: {
-      labels: xValues,
-      datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-      }]
-    },
-    options: {
-      legend: {display: false},
-      title: {
-        display: true,
-        text: "Sum of Fish"
-      }
+<script>
+  const summaryTitle = document.getElementById('summaryTitle');
+  const dataContainer = document.getElementById('tableData');
+  const tableRow = dataContainer.getAttribute('tableRow');
+  const tableCol = dataContainer.getAttribute('tableCol');
+  const tableAgr = dataContainer.getAttribute('tableAgr');
+
+  console.log(tableRow)
+
+  if (tableRow === '') {
+    summaryTitle.textContent = "Data Summary";
+    dataContainer.textContent = "Attributes not found!";
+  } else {
+    summaryTitle.textContent = `${tableAgr}(${tableCol}) dari ${tableRow}`;
+
+    function generateTable() {
+      const resultTable = document.getElementById("resultTable");
+  
+      // Make an AJAX request to the server to get the aggregated data based on the selected parameters
+      fetch(`/getData?row=${tableRow}&col=${tableCol}&agr=${tableAgr}`)
+        .then(response => response.json())
+        .then(data => {
+          // Generate the table based on the received data
+          generateTableFromData(resultTable, data, tableRow, tableCol, tableAgr);
+        })
+        .catch(error => console.error("Error fetching data:", error));
     }
-  });
+  
+    function generateTableFromData(table, data, selectedRow, selectedCol, selectedAgr) {
+      // Clear existing table content
+      table.innerHTML = "";
+  
+      // Create table header
+      const headerRow = table.insertRow();
+      headerRow.insertCell().innerText = selectedRow;
+      headerRow.insertCell().innerText = `${selectedAgr}(${selectedCol})`;
+  
+      // Populate table rows with data
+      data.forEach(item => {
+        const row = table.insertRow();
+        row.insertCell().innerText = item[selectedRow];
+        row.insertCell().innerText = item.aggregatedValue;
+      });
+    }
+
+    generateTable();
+  }
+
+
+  const barTitle = document.getElementById('barTitle');
+  const barData = document.getElementById('barData');
+  const barRow = barData.getAttribute('barRow');
+  const barCol = barData.getAttribute('barCol');
+  const barAgr = barData.getAttribute('barAgr');
+
+  if (barRow === '') {
+    barTitle.textContent = "Bar Chart";
+    barData.textContent = "Attributes not found!";
+  } else {
+    barTitle.textContent = `${barAgr}(${barCol}) dari ${barRow}`;
+
+    function generateChart() {
+      fetch(`/getDataForChart?row=${barRow}&col=${barCol}&agr=${barAgr}`)
+        .then(response => response.json())
+        .then(data => {
+          // Extract labels and data from the response
+          const labels = data.map(item => item.label);
+          const chartData = data.map(item => item.value);
+          console.log(chartData)
+          // Create a bar chart
+          createBarChart(labels, chartData);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    }
+  
+    function createBarChart(labels, data) {
+      var ctx = document.getElementById('bar').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          legend: {display: false},
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    generateChart();
+  }
+
+
+  const scatterTitle = document.getElementById('scatterTitle');
+  const scatterData = document.getElementById('scatterData');
+  const scatterRow = scatterData.getAttribute('scatterRow');
+  const scatterCol = scatterData.getAttribute('scatterCol');
+  const scatterAgr = scatterData.getAttribute('scatterAgr');
+
+  if (scatterRow === '') {
+    scatterTitle.textContent = "Scatter Plot";
+    scatterData.textContent = "Attributes not found!";
+  } else {
+    scatterTitle.textContent = `Persebaran antara ${scatterRow} dan ${scatterCol}`;
+
+    function generateScatterPlot() {
+      fetch(`/getDataForScatterPlot?row=${scatterRow}&col=${scatterCol}&agr=${scatterAgr}`)
+        .then(response => response.json())
+        .then(data => {
+          // Extract labels and data from the response
+          const labels = data.map(item => item.label);
+          const chartData = data.map(item => ({ x: item.xValue, y: item.yValue }));
+          // Create a scatter plot
+          createScatterPlot(labels, chartData);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    }
+  
+    function createScatterPlot(labels, chartData) {
+      const ctx = document.getElementById("scatter").getContext("2d");
+      const scatterChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Scatter Plot',
+            pointRadius: 4,
+            data: chartData,
+            pointBackgroundColor: 'rgba(75, 192, 192, 0.2)', // Set the background color
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              type: 'linear',
+              position: 'bottom'
+            },
+            y: {
+              min: 0 // You can adjust the minimum value for the y-axis
+            }
+          }
+        }
+      });
+    }
+
+    generateScatterPlot();
+  }
+
+  function dataSets(){
+    window.location.href='datasets'
+  }
 
   function dataSummary(){
     window.location.href='data-summary'
@@ -118,36 +238,4 @@
   function scatterPlot(){
     window.location.href='scatter-plot'
   }
-
-  const xyValues = [
-  {x:50, y:7},
-  {x:60, y:8},
-  {x:70, y:8},
-  {x:70, y:9},
-  {x:90, y:9},
-  {x:100, y:9},
-  {x:110, y:10},
-  {x:120, y:11},
-  {x:130, y:14},
-  {x:140, y:14},
-  {x:150, y:15}
-];
-
-new Chart("scatter", {
-  type: "scatter",
-  data: {
-    datasets: [{
-      pointRadius: 4,
-      pointBackgroundColor: "rgb(0,0,255)",
-      data: xyValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    scales: {
-      xAxes: [{ticks: {min: 40, max:160}}],
-      yAxes: [{ticks: {min: 6, max:16}}],
-    }
-  }
-});
 </script>
