@@ -8,9 +8,10 @@ html, body{
     text-decoration: none;
 }
 
-a{
-    color:white
+.bar{
+    color: white;
 }
+
 header{
     background-color: black;
     display: flex;
