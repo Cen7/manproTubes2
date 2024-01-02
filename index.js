@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
  
-const port = 300;
+const port = 370;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));
