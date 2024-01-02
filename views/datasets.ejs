@@ -1,76 +1,142 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <title>Dataset</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
-  <link rel="stylesheet" href="css/datasets.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600" />
+  <link rel="stylesheet" href="css/datasets.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <div class="navbar">
 </div>
+
 <body>
-    <div class="home-page">
-            <p class="dashboard">Dataset</p>
-
-            <!-- search bar -->
-            <div class="search-bar">
-                <form id="searchForm">
-                    <div class="search-box">
-                        <input type="text" id="search-input" placeholder="Search data...">
-                        <button id="go" class="search-btn" type="button">Go</button>
-                    </div>
-                </form>
-               
+  <div class="home-page">
+    <p class="dashboard">Datasets</p>
+    <div class="content">
+      <div class="content-left">
+        <form id="inputData" action="/import-csv" method="post" enctype="multipart/form-data">
+          <div>
+            <input type="file" class="form-control" name="file" accept=".csv" />
+          </div>
+          <div class="button-submit">
+            <input type="submit" class="submit-button" value="Store file" />
+          </div>
+        </form>
+  
+        <div class="result-aria">
+          <table>
+            <thead>
+              <tr>
+                <th>Table Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let tableName of tables) { %>
+                <tr>
+                  <td id="tableName">
+                    <%= tableName %>
+                  </td>
+                </tr>
+                <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="content-right">
+        <!-- search bar -->
+        <div class="search-bar">
+          <form id="searchForm">
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="Search data...">
+              <button id="go" class="search-btn" type="button">Go</button>
             </div>
-
-            <!-- search results -->
-            <div class="result-aria">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Table Name</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% for (let tableName of tables) { %>
-                      <tr>
-                        <td><%= tableName %></td>
-                      </tr>
-                    <% } %>
-                  </tbody>
-                </table>
-            </div>
-    </div>
-    <script>
-        console.log('Im in');
-
-        document.getElementById("go").addEventListener("click", searchTable);
-
-        function searchTable() {
-        // Get the input value and convert it to lowercase
-        const input = document.getElementById("search-input").value.toLowerCase();
-        console.log(input);
+          </form>
+        </div>
         
-        // Get all table rows and iterate through them
-        const rows = document.getElementsByTagName("tr");
+        <div class="resultTable">
+          <% for (let tableName of tables) { %>
+            <table class="table-content" id="<%= tableName %>">
+              <!-- Table content goes here for <%= tableName %> -->
+            </table>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        for (let i = 0; i < rows.length; i++) {
-            // Get the text content of each row and convert it to lowercase
-            const rowText = rows[i].textContent.toLowerCase();
-            
-            // If the input value is found in the row text, highlight the row
-            if (rowText.includes(input)) {
-            rows[i].classList.add("highlight");
-            } else {
-            rows[i].classList.remove("highlight");
-            }
-        }
-        }
+  <script>
+    console.log('Im in');
 
-    </script> 
+    document.getElementById("tableName").addEventListener("click", dataContent);
+
+    function dataContent() {
+      const tableName = document.getElementById('tableName').textContent.trim();
+      console.log(tableName)
+
+      fetch(`/getTableData?table=${tableName}`)
+        .then(response => response.json())
+        .then(data => {
+          const tableElement = document.getElementById(tableName);
+          
+          // Generate the table based on the received data
+          showTable(tableElement, data);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    }
+
+    function showTable(tableElement, data) {
+      // Clear existing table content
+      tableElement.innerHTML = "";
+
+      // Create table header
+      const headerRow = tableElement.insertRow();
+      for (const key in data[0]) {
+        const th = document.createElement('th');
+        th.innerText = key;
+        headerRow.appendChild(th);
+      }
+
+      // Populate table rows with data
+      data.forEach(item => {
+        const row = tableElement.insertRow();
+        for (const key in item) {
+          const cell = row.insertCell();
+          cell.innerText = item[key];
+        }
+      });
+    }
+
+    document.getElementById("go").addEventListener("click", searchTable);
+
+    function searchTable() {
+      // Get the input value and convert it to lowercase
+      const input = document.getElementById("search-input").value.toLowerCase();
+      console.log(input);
+
+      const tableName = document.getElementById('tableName').textContent.trim();
+      const table = document.getElementById(tableName);
+      // Get all table rows and iterate through them
+      const rows = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < rows.length; i++) {
+        // Get the text content of each row and convert it to lowercase
+        const rowText = rows[i].textContent.toLowerCase();
+
+        // If the input value is found in the row text, highlight the row
+        if (rowText.includes(input)) {
+          rows[i].style.display = ""; // Show the row
+        } else {
+          rows[i].style.display = "none"; // Hide the row
+        }
+      }
+    }
+
+  </script>
 </body>
