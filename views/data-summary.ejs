@@ -18,14 +18,8 @@
     <p class="dashboard">Data Summary</p>
 
     <div class="selection">
-      <label>Row:</label>
+      <label>Data 1:</label>
       <select class="row" id="rowSelect" placeholder="Select a feature">
-        <% columns.forEach(column => { %>
-          <option value="<%= column %>"><%= column %></option>
-        <% }); %>
-      </select>
-      <label>Column:</label>
-      <select class="col" id="colSelect">
         <% columns.forEach(column => { %>
           <option value="<%= column %>"><%= column %></option>
         <% }); %>
@@ -37,6 +31,12 @@
         <option value="avg">Average</option>
         <option value="max">Max</option>
         <option value="min">Min</option>
+      </select>
+      <label>Data 2:</label>
+      <select class="col" id="colSelect">
+        <% columns.forEach(column => { %>
+          <option value="<%= column %>"><%= column %></option>
+        <% }); %>
       </select>
       <button onclick="generateTable()" class="generate">Generate Table</button>
     </div>

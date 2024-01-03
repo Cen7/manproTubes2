@@ -17,14 +17,8 @@
   <div class="home-page">
     <p class="dashboard">Bar Chart</p>
     <div class="selection">
-      <label>Row:</label>
+      <label>X-axis:</label>
       <select class="row" id="rowSelect" placeholder="Select a feature">
-        <% columns.forEach(column => { %>
-          <option value="<%= column %>"><%= column %></option>
-        <% }); %>
-      </select>
-      <label>Column:</label>
-      <select class="col" id="colSelect">
         <% columns.forEach(column => { %>
           <option value="<%= column %>"><%= column %></option>
         <% }); %>
@@ -37,6 +31,13 @@
         <option value="max">Max</option>
         <option value="min">Min</option>
       </select>
+      <label>Y-axis:</label>
+      <select class="col" id="colSelect">
+        <% columns.forEach(column => { %>
+          <option value="<%= column %>"><%= column %></option>
+        <% }); %>
+      </select>
+      
       <button onclick="generateChart()" class="generate">Generate Bar Chart</button>
     </div>
     <div class="chart-container">
@@ -45,6 +46,7 @@
   </div>
 
   <script>
+    let chart;
     function generateChart() {
       const rowSelect = document.getElementById("rowSelect");
       const colSelect = document.getElementById("colSelect");
@@ -53,6 +55,10 @@
       const selectedRow = rowSelect.value;
       const selectedCol = colSelect.value;
       const selectedAgr = agrSelect.value;
+
+      if(chart){
+        chart.destroy();
+      }
   
       fetch(`/getDataForChart?row=${selectedRow}&col=${selectedCol}&agr=${selectedAgr}`)
         .then(response => response.json())
@@ -62,7 +68,7 @@
           const chartData = data.map(item => item.value);
           console.log(chartData)
           // Create a bar chart
-          createBarChart(labels, chartData);
+          chart = createBarChart(labels, chartData);
         })
         .catch(error => console.error("Error fetching data:", error));
     }
@@ -89,6 +95,8 @@
           }
         }
       });
+      
+      return myChart;
     }
   </script>
 </body>

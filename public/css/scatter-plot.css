@@ -26,3 +26,6 @@
   .dot {
     stroke: #000;
   }
+  #myChart{
+    max-height: 70vh;
+  }

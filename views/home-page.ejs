@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section" id="data-summary">
         <div class="head-section">
           <p class="title-section" id="summaryTitle"></p>
           <button onclick="dataSummary()" class="view-more">View more</button>
@@ -51,7 +51,7 @@
           <button onclick="barChart()" class="view-more">View more</button>
         </div>
         <div id="barData" barRow = "<%= barRow%>" barCol = "<%= barCol%>" barAgr = "<%= barAgr%>"></div>
-        <canvas id="bar" style="width:100%;max-width:600px"></canvas>
+        <canvas id="bar"></canvas>
       </div>
 
       <div class="section chart" id="scatter-plot">
@@ -60,7 +60,7 @@
           <button onclick="scatterPlot()" class="view-more">View more</button>
         </div>
         <div id="scatterData" scatterRow = "<%= scatterRow%>" scatterCol = "<%= scatterCol%>" scatterAgr = "<%= scatterAgr%>"></div>
-        <canvas id="scatter" style="width:100%;max-width:600px"></canvas>
+        <canvas id="scatter"></canvas>
       </div>
     </div>
   </div>
@@ -207,6 +207,7 @@
           }]
         },
         options: {
+          legend: {display: false},
           scales: {
             x: {
               type: 'linear',

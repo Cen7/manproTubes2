@@ -57,10 +57,16 @@ table{
   line-height: 1.2125;
   color: #000000;
   font-family: Inter, 'Source Sans Pro';
+  max-width: 70vh;
+ 
 }
-
-td{
-  width: auto;
+tr{
+  max-width: 20vh;
+  border-bottom: 1.5px solid #2929292d;
+}
+#resultTable td{
+  border-bottom: 2.5px solid #2929292d;
+  width: 20vh;
 }
 #resultTable tr:first-child {
   font-weight: 700;
