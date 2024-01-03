@@ -26,7 +26,6 @@ body{
   grid-template-columns: 1.5fr 1fr;
   gap: 1.5rem;
   background-color: #fefffc;
-  height: calc(100% - 5rem); /* Adjust based on the height of your navbar */
 }
 .dashboard {
   font-size: 2.7rem;
@@ -35,8 +34,6 @@ body{
   color: #000000;
   font-family: Inter, 'Source Sans Pro';
 }
-
-
 
 .content-left{
   display: flex;
@@ -106,12 +103,23 @@ body{
 }
 .title-section {
   justify-self: flex-start;
-  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.2125;
   color: #000000;
   font-family: Inter, 'Source Sans Pro';
+}
+#summaryTitle{
+  max-width: 35rem; /* Set the maximum width before truncating with ellipsis */
+}
+#barTitle{
+  max-width: 20rem; /* Set the maximum width before truncating with ellipsis */
+}
+#scatterTitle{
+  max-width: 20rem; /* Set the maximum width before truncating with ellipsis */
 }
 .view-more {
   width: 8rem;
@@ -132,7 +140,6 @@ body{
 }
 .section .content-section {
   width: 100%;
-  margin: 2rem 0;
   font-size: 1rem;
   line-height: 1.2125;
   color: #000000;
@@ -140,8 +147,14 @@ body{
   text-align: center;
   border-collapse: collapse;
 }
+
+#data-summary{
+  height: 28rem;
+}
+
 #tableData{
   width: 100%;
+  overflow-y: scroll;
 }
 
 th{
@@ -149,6 +162,7 @@ th{
 }
 tr:first-child {
   border-top: none;
+  font-weight: 500;
   border-bottom: 2.5px solid #2929292d;
 }
 tr{
@@ -165,11 +179,12 @@ tr:last-child {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: fit-content;
 }
 
 .chart{
   padding: 1rem;
-  height: 38%;
+  height: 16.9rem;
 }
 
 .chart canvas {
