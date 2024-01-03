@@ -236,6 +236,7 @@ function uploadCsv(path){
         })
       }
     })
+    fs.unlinkSync(path)
   })
   stream.pipe(fileStream)
 }
