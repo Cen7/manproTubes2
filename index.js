@@ -11,7 +11,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const port = 8080;
+ 
+const port = 320;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));
@@ -266,7 +267,8 @@ app.get("/scatter-plot", async (req, res) => {
   }
 });
 
-// Your Server-side Code
+
+
 app.get("/getDataForScatterPlot", async (req, res) => {
   try {
     const scatterRow = req.query.row;

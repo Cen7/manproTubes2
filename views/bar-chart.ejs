@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="css/bar-chart.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
-<div class="navbar">
-  <a href="/">Home</a>
-</div>
+
 <body>
+  <%- include('navbar') %>
   <div class="home-page">
     <p class="dashboard">Bar Chart</p>
     <div class="selection">
@@ -38,7 +37,7 @@
         <option value="max">Max</option>
         <option value="min">Min</option>
       </select>
-      <button onclick="generateChart()" class="generate">Generate Chart</button>
+      <button onclick="generateChart()" class="generate">Generate Bar Chart</button>
     </div>
     <div class="chart-container">
       <canvas id="myChart"></canvas>

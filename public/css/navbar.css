@@ -1,0 +1,47 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    text-decoration: none;
+}
+
+
+header{
+    background-color: black;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+    position: sticky;
+    padding: 0 30px;
+    border-bottom: 5px solid #425A7D;
+    box-shadow: 10px -10px 16px black;
+    
+}
+.bar{
+    display: flex;
+}
+.barpilihan{
+    display: flex;
+    margin: 0 25px;
+}
+.barpilihan > a{
+    align-self: stretch;
+    padding: 22px 25px;
+    color: white;
+    font-family: Inter, 'Source Sans Pro';
+}
+
+.barpilihan > a:hover {
+    background-color: white;
+    box-shadow:0 5px 0 grey;
+    color: black;
+}
+.barprofile{
+    align-items: center;
+    display: inline-flex;
+    gap: 15px;
+}
+
