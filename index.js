@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
  
-const port = 320;
+const port = 8080;
 app.set("view engine", "ejs");
 app.use(express.static("Assets"));
 app.use(express.static("public"));
@@ -122,6 +122,7 @@ function uploadCsv(path){
         })
       }
     })
+    fs.unlinkSync(path)
   })
   stream.pipe(fileStream)
 }
@@ -273,11 +274,9 @@ app.get("/getDataForScatterPlot", async (req, res) => {
   try {
     const scatterRow = req.query.row;
     const scatterCol = req.query.col;
-    const scatterAgr = req.query.agr;
 
     req.session.scatterRow = scatterRow;
     req.session.scatterCol = scatterCol;
-    req.session.scatterAgr = scatterAgr;
 
     // Construct the SQL query based on the selectedRow, selectedCol, and selectedAgr
     const sqlQuery = `SELECT ${scatterRow} AS xValue, ${scatterCol} AS yValue FROM marketing_campaign`;
